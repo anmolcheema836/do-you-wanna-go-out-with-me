@@ -1,0 +1,111 @@
+/* Basic Setup */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff5f5;
+    font-family: 'Indie Flower', cursive;
+    overflow: hidden; /* Prevents scrollbars when button moves */
+}
+
+/* Main Container Styling */
+.container {
+    text-align: center;
+    background-color: #ffebee;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid #ff6b81;
+    box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
+    max-width: 90%;
+    width: 400px;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.header_text {
+    font-size: 2rem; /* Using rem for better scalability */
+    color: #ff6b81;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 107, 129, 0.2);
+}
+
+.gif_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically align buttons */
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 1.25rem;
+    border: 2px solid #ff6b81;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ff6b81;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    box-shadow: 0 4px 10px rgba(255, 107, 129, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.05); /* Enhanced hover effect */
+    box-shadow: 0 6px 15px rgba(255, 107, 129, 0.4);
+}
+
+/* Yes Button specific styling */
+#yesButton {
+    background-color: #ff6b81;
+    border-color: #ff6b81;
+    transform: scale(1.1); /* Make it slightly bigger to start */
+}
+
+#yesButton:hover {
+    background-color: white;
+    color: #ff6b81;
+}
+
+/* No Button specific styling */
+#noButton {
+    background-color: #ff4757;
+    border-color: #ff4757;
+    /* Smooth transition for movement */
+    transition: all 0.3s ease;
+}
+
+#noButton:hover {
+    background-color: white;
+    color: #ff4757;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .header_text {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 10px;
+    }
+}
